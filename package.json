@@ -1,0 +1,27 @@
+{
+  "name": "project_layout",
+  "version": "1.0.0",
+  "description": "* In API Routes - Create Update contacts Api Put route, as well as a Get Route for a findAll where UserID = req.user.id; test current routes.",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "express-session": "^1.14.2",
+    "express-handlebars": "^3.0.0",
+    "mysql2": "^1.5.3",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "sequelize": "^4.38.0"
+  }
+}
