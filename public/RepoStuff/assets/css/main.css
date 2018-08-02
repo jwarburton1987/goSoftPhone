@@ -2372,4 +2372,17 @@ button:active,
 	#footer .copyright li:first-child {
 		margin-top: 0;
 	}
+	.column {
+		width: 33.3%;
+	}
+	#top {
+		overflow: initial;
+    width: 375px;
+    position: absolute;
+    top: 0;
+    left: 0;
+	}
+	#phoneHeader {
+		display: none;
+	}
 }
