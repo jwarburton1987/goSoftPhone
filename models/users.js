@@ -17,12 +17,12 @@ module.exports = function(sequelize, DataTypes) {
     password: {
       type: DataTypes.STRING,
       allowNull: false
-    },
-    twilio_number: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      defaultValue: 7146955738
     }
+    // twilio_number: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false,
+    //   defaultValue: 7146955738
+    // }
   });
   // Creating a custom method for our User model. This will check if an unhashed password entered by the user can be compared to the hashed password stored in our database
   User.prototype.validPassword = function(password) {

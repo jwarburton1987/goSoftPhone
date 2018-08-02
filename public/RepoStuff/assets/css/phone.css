@@ -1,11 +1,9 @@
 h3 {
-
     font-family: 'Nosifer';
     font-size: 100px;
     color: teal;
     padding: 110px;
-    padding-right:10px;
-
+    /* padding-right:10px; */
 }
 
 body {
@@ -13,45 +11,43 @@ body {
     background-color: #cccccc;
     margin: 0;
     padding: 0;
-
 }
 
 
 input:focus,
 button:focus {
-
     outline: none;
 }
 
 
 
 div {
-
     box-sizing: border-box;
-
 }
 
-.container {
+.phone {
     width: 400px;
     background: white;
     margin: 10px auto;
     border-radius: 8px;
     box-shadow: 0 1px 10px 0 #777;
+    display: flex;
+    justify-content: center;
 }
 
-.header {
+/* .header {
     width: 100%;
     padding-top: 30px;
     padding-bottom: 0;
-}
+} */
 
-.header::after {
+/* .header::after {
     display: block;
     content: "";
     clear: both;
-}
+} */
 
-.header .input input[type="text"] {
+.input input[type="text"] {
     width: 80%;
     float: left;
     padding: 20px;
@@ -61,10 +57,9 @@ div {
     font-weight: bolder;
     text-align: right;
     color: teal;
-
 }
 
-.header.input input {
+.input input {
     width: 10%;
     box-sizing: border-box;
     padding: 8px;
@@ -76,25 +71,22 @@ div {
     color: #0A51BC;
 }
 
-.header .reset {
-
+.reset {
     width: 20%;
     float: left;
     padding-right: 10px;
-
 }
 
-.header .reset button {
+.reset button {
     width: 100;
     padding: 8px;
     border: none;
     background: transparent;
     font-size: 16px;
-
 }
 
 
-.body {
+.keypad {
     background: black;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -104,27 +96,24 @@ div {
     padding-right: 10px;
 }
 
-.body .row {
-
+.keypad columns {
     width: 100%;
     padding: 20px 0;
-
-
 }
 
-.body .row::after {
+.keypad columns::after {
     display: block;
     content: "";
     clear: both;
 }
 
-.body .row .col-3 {
+.keypad columns .col-3 {
     width: 33.3333%;
     float: left;
     text-align: center;
 }
 
-.body .row .col-3 button {
+.keypad columns .col-3 button {
     width: 68px;
     height: 68px;
     border-radius: 100%;
@@ -132,45 +121,71 @@ div {
     font-family: 'montserrat';
     color: black;
     font-size: 30px;
-    background: blueviolet;
-    box-shadow: 0 5px 10px 0 blueviolet;
+    /* background: blueviolet;
+    box-shadow: 0 5px 10px 0 blueviolet; */
 }
 
-.body .row .col-3 button:focus {
-    background: black;
+.keypad columns .col-3 button:focus {
+    background: blue;
 }
 
-.body .row .col-2 {
-
+.keypad columns .col-2 {
     float: left;
     width: 50%;
     padding-left:5px;
     padding-right:5px;
 }
 
-.body .row .col-2 button {
-
+.keypad columns .col-2 button {
     width: 68px;
     height: 68px;
     border-radius: 100%;
     border: none;
     color:aqua;
     font-size: 25px;
-    box-shadow: 0 5px 10px 0 #1DE0B4;
-    
+    /* box-shadow: 0 5px 10px 0 #1DE0B4; */
 }
 
-.body .row .col-2 button.android {
-
-    
+.keypad columns .col-2 button.android {
     color: black;
     font-size: 25px;
     float:right;
 }
 
-.body .row .col-2 button.iphone{
-
-    
+.keypad columns .col-2 button.iphone{
     color: black;
     font-size: 25px;
 }
+
+.columns {
+    text-align: center;
+}
+
+.sidebarIcons {
+    align-items: flex-start !important;
+    /* padding: 0 !important; */
+    float: left !important;
+    padding-left: 0 !important; 
+    padding-bottom: 0 !important;
+    padding-right: 5px;
+}
+
+#navTxt {
+    float: right;
+    margin-left: 12px;
+}
+
+.input-field {
+    width: 100%;
+}
+
+.mdl-textfield__label__icon {
+    align-items: right;
+    float: right;
+    padding-top: 10px;
+    color: white;
+}
+/* .container {
+    display: flex;
+    justify-content: center;
+} */
