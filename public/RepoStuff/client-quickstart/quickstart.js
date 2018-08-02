@@ -68,7 +68,7 @@ $(document).ready(function(){
   $("#button-call").click(function () {
     // get the phone number to connect the call to
     var params = {
-      To: $("#phone-number").val()
+      To: document.getElementById("phoneNumField").value
     };
 
     console.log("Calling " + params.To + "...");
