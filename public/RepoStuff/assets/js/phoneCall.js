@@ -9,7 +9,7 @@ $(document).ready(function(){
         
         <label class="mdl-textfield__label" for="phoneNumField"></label>
         <span class="mdl-textfield__error">Input is not a number!</span>
-        <div class="iconBox"><a href="" id="restphone"><i class="material-icons mdl-textfield__label__icon icons" id="closeIcon">close</i></a></div>
+        <div class="iconBox reset"><a href="" id="restphone"><i class="material-icons mdl-textfield__label__icon icons" id="closeIcon">close</i></a></div>
       </div>`
   );
 

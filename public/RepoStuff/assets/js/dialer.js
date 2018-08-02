@@ -9,7 +9,7 @@ for(var i=0; i<btn.length;i++){
        var num1=input.value;
        var num2=this.childNodes[0].nodeValue;
        
-       num=num1+num2
+       var num=num1+num2;
        input.value=num;  
 
    });

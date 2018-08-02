@@ -3,12 +3,8 @@
 /*
 	Prologue by HTML5 UP
 	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license) 1762
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-
-/* #main {
-	padding: 0 100px 0 100px;
-} */
 
 html,
 body,
@@ -1763,7 +1759,7 @@ button,
 	position: relative;
 	display: inline-block;
 	border-radius: 0.35em;
-	color: #fff;
+	color: #fff !important;
 	text-decoration: none;
 	padding: 0.75em 2.5em 0.75em 2.5em;
 	background-color: #8ebebc;
@@ -2010,9 +2006,7 @@ button:active,
 
 #main {
 	margin-left: 375px;
-	padding: 0 100px 0 100px;
 }
-
 
 #main>section {
 	margin: 0;
@@ -2352,6 +2346,9 @@ button:active,
 		font-size: 1.25em;
 	}
 	/* Main */
+	#main {
+		padding: 0 100px 0 100px;
+	}
 	#main>section {
 		padding: 2em 0;
 	}
