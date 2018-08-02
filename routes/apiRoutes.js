@@ -1,6 +1,7 @@
 // Requiring our models and passport as we've configured it
 var db = require("../models");
 var passport = require("../config/passport");
+var ClientCapability = require('twilio').jwt.ClientCapability;
 
 var isAuthenticated = require("../config/middleware/isAuthenticated");
 
@@ -149,6 +150,33 @@ app.post('/login', passport.authenticate('local', {
   //       res.json(dbPost);
   //     });
   // });
+
+//   app.get('/token', (req, res) => {
+//     // put your Twilio API credentials here
+//     const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+//     const authToken = 'your_auth_token';
+  
+//     // put your Twilio Application Sid here
+//     const appSid = 'APXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+  
+//     const capability = new ClientCapability({
+//       accountSid: accountSid,
+//       authToken: authToken,
+//     });
+//     capability.addScope(
+//       new ClientCapability.OutgoingClientScope({ applicationSid: appSid })
+//     );
+//     capability.addScope(new ClientCapability.IncomingClientScope('joey'));
+//     const token = capability.toJwt();
+  
+//     res.set('Content-Type', 'application/jwt');
+//     res.send(token);
+//   });
+  
+//   app.post('/voice', (req, res) => {
+//     // TODO: Create TwiML response
+//   });
+
 };
 
 

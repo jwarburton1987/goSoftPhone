@@ -104,44 +104,25 @@
 				
 
 				<h3>SOFT PHONE</h3>
-
+<!-- TODO: Look into Twilio's "enter a client-name feature for dial by name feature within the phone itself without switching to contacts" -->
 				<!-- <div class="container"> -->
 				<div class="phone">
-
-					<!-- <div class="columns">
-						<form class="column">
-							<div class="input-field">
-								<textarea id="textarea1" class="materialize-textarea"><i class="material-icons" id="suffix-X">close</i></textarea>
-							</div>
-						</form>
-					</div> -->
-					<!-- <div class="mdc-text-field mdc-text-field--box mdc-text-field--with-leading-icon">
-							<i class="material-icons mdc-text-field__icon" tabindex="0" role="button">event</i>
-							<input type="text" id="my-input" class="mdc-text-field__input">
-							<label for="my-input" class="mdc-floating-label">Your Name</label>
-							<div class="mdc-line-ripple"></div>
-						</div> -->
-					<!-- <textarea>
-						<div class="input" align="right">
-							<input type="text">
+						<div id="controls">
+								<div id="info">
+									<!-- <p class="instructions">Twilio Client</p> -->
+									<!-- <div id="client-name"></div> -->
+									<div id="output-selection">
+										<label>Ringtone Devices</label>
+										<select id="ringtone-devices" multiple></select>
+										<label>Speaker Devices</label>
+										<select id="speaker-devices" multiple></select><br/>
+										<a id="get-devices">Seeing unknown devices?</a>
+								</div>
 						</div>
-						<div class="reset" align="left">
-							<button><i class="material-icons">close</i></button>
-						</div>
-					</textarea> -->
-					<!-- <br><hr><br>
-					<div class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-leading-icon">
-							<i class="material-icons mdc-text-field__icon" tabindex="0" role="button">event</i>
-							<input type="text" id="my-input" class="mdc-text-field__input">
-							<label for="my-input" class="mdc-floating-label">Your Name</label>
-							<div class="mdc-notched-outline">
-								<svg>
-									<path class="mdc-notched-outline__path"/>
-								</svg>
-							</div>
-							<div class="mdc-notched-outline__idle"></div>
-						</div> -->
-<br>
+						<br>
+						
+					<div id="call-controls">
+					
 					<div class="keypad">
 						<div class="columns">
 							<div class="column is-one-fourth">
@@ -193,13 +174,13 @@
 
 						<div class="columns">
 							<div class="column">
-								<button>
+								<button id="button-hangup">
 										<i class="material-icons">call_end</i>
 								</button>
 							</div>
 							<div class="column"></div>
 							<div class="column">
-								<button>
+								<button id="button-call">
 									<i class="material-icons">call</i>
 								</button>
 							</div>
@@ -207,9 +188,14 @@
 
 					</div>
 				<!-- </div> -->
-
-
-
+				<div id="volume-indicators">
+						<label>Mic Volume</label>
+						<div id="input-volume"></div><br/><br/>
+						<label>Speaker Volume</label>
+						<div id="output-volume"></div>
+					</div>
+					</div>
+				</div>
 			</div>
 		</section>
 
@@ -237,9 +223,11 @@
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script src="assets/js/dailer.js"></script>
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="https://media.twiliocdn.com/sdk/js/client/v1.4/twilio.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
 	<script src="assets/js/phoneCall.js"></script>
+	<script src="client-quickstart/quickstart.js"></script>
 
 </body>
 

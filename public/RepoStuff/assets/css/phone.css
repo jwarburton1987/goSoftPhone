@@ -19,7 +19,9 @@ button:focus {
     outline: none;
 }
 
-
+#button-call:hover {
+    color: rgb(10, 161, 10) !important;
+}
 
 div {
     box-sizing: border-box;
@@ -27,7 +29,9 @@ div {
 
 .phone {
     width: 400px;
-    background: white;
+    padding-left: 2px;
+    padding-right: 2px;
+    background: black;
     margin: 10px auto;
     border-radius: 8px;
     box-shadow: 0 1px 10px 0 #777;
@@ -179,18 +183,79 @@ div {
     width: 100%;
 }
 
-.mdl-textfield__label__icon {
+#closeIcon {
+    position: relative;
     align-items: right;
     float: right;
     /* padding-top: 10px; */
     top: 10px;
     color: white;
+    opacity: 0.3;
+    z-index: 1000;
 }
 
-.mdl-textfield {
-    width: 100%;
+#closeIcon:hover {
+    opacity: 1;
+}
+
+#numBox {
+    height: 100px;
+    width: 95%;
+    position: relative;
+    background: black;
+}
+
+#phoneNumField {
+    /* position: inherit; */
+    height: 100%;
+    position: absolute;
+    bottom: 12px;
+    height: 100%;
+    right: 0;
+}
+
+.iconBox {
+    position: absolute;
+    bottom: 12px;
+    height: 100%;
+    right: 0;
+}
+
+#info,
+#output-selection, 
+#volume-indicators {
+    display: none;
+}
+
+#call-controls {
+    overflow: hidden;
+}
+
+#controls {
+    background: black;
+    border-radius: .3em;
 }
 /* .container {
     display: flex;
     justify-content: center;
 } */
+
+input[type="text"]::-webkit-input-placeholder {
+    color: #636c72 !important;
+    text-align: center;
+}
+    
+input[type="text"]:-moz-placeholder { /* Firefox 18- */
+    color: #636c72 !important;
+    text-align: center;  
+}
+    
+input[type="text"]::-moz-placeholder {  /* Firefox 19+ */
+    color: #636c72 !important;
+    text-align: center;  
+}
+    
+input[type="text"]:-ms-input-placeholder {  
+    color: #636c72 !important;
+    text-align: center;  
+}
