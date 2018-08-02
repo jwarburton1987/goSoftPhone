@@ -2609,3 +2609,7 @@ input, select, textarea {
 				}
 
 	}
+
+	.table-responsive{
+		overflow-x:auto !important;
+	  }
