@@ -1,6 +1,14 @@
-var input=document.querySelectorAll(".input input")[0];
-var reset=document.querySelectorAll(".reset button")[0];
-var btn = document.querySelectorAll(".col-3 button");
+// var input=document.querySelectorAll("#phoneNumField input")[0];
+// // var reset=document.querySelectorAll(".reset button")[0];
+// var btn = document.querySelectorAll(".column button");
+
+var inputNum = $("#phoneNumField").val();
+var btnVal = $(".numBtn").text();
+console.log(btnVal);
+
+$(".numBtn").click(function() {
+    
+});
 
 
 for(var i=0; i<btn.length;i++){
