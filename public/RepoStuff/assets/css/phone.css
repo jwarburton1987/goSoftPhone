@@ -182,8 +182,13 @@ div {
 .mdl-textfield__label__icon {
     align-items: right;
     float: right;
-    padding-top: 10px;
+    /* padding-top: 10px; */
+    top: 10px;
     color: white;
+}
+
+.mdl-textfield {
+    width: 100%;
 }
 /* .container {
     display: flex;

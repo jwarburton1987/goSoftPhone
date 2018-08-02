@@ -13,18 +13,26 @@ $(document).ready(function(){
   // </div><br>`
   // );
   $(".keypad").prepend(
-    `<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="phoneNumField">
+    `<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="numBox">
+        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="phoneNumField" placeholder="">
         <label class="mdl-textfield__label" for="phoneNumField"><i class="material-icons mdl-textfield__label__icon">close</i></label>
         <span class="mdl-textfield__error">Input is not a number!</span>
       </div>`
   );
-});
 
-$(".mdl-textfield").focusin(function() {
-  $(".mdl-textfield__label").css("padding-top", "30px");
-});
 
+// $()
+
+// $(".mdl-textfield").focusin(function() {
+//   $(".mdl-textfield__label").css("padding-top", "30px");
+// });
+
+if($("#numBox").hasClass("is-focused")) {
+  $(".mdl-textfield__label__icon").css("padding-top", "30px");
+}else{
+  $(".mdl-textfield__label__icon").css("padding-top", "10px");
+}
+});
 // <!-- Numeric Textfield with Floating Label -->
 // <form action="#">
 //   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
