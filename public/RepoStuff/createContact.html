@@ -20,7 +20,7 @@
 	<link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 	<link rel="stylesheet" href="assets/css/main.css">
-	<link rel="stylesheet" href="assets/css/phone.css">
+	<link rel="stylesheet" href="assets/css/createContact.css">
 	<script src="https://code.jquery.com/jquery.js"></script>
 </head>
 
@@ -52,7 +52,7 @@
 					
 					<li class="navItems" id="listNav">
 							<!-- TODO: FIX SIDEBAR LINKS <i class="fas fa-address-book"></i> -->
-							<a href="" id="contact-link">
+							<a href="/contact_list" id="contact-link">
 								<p class="home navContacts"><i class="sidebarIcons fas fa-address-book"></i><span id="navTxt"> Contact List</span></p>
 							</a>
 					</li>
@@ -66,7 +66,7 @@
 					
 					<li class="navItems" id="profileNav">
 						<!-- TODO: FIX SIDEBAR LINKS <i class="fas fa-user-circle"></i> -->
-						<a href="" id="profile-link">
+						<a href="#" id="profile-link">
 							<p class="home navProfile"><i class="sidebarIcons fas fa-user-circle"></i><span id="navTxt"> Profile</span></p>
 						</a>
 					</li>
@@ -107,7 +107,14 @@
 
 	<!-- Main -->
 	<div id="main">
-
+    <div class="logout">
+      <!-- <a href="/logout" id="logout-link">
+        <p class="logoutBtn"><i class="fas fa-sign-out-alt"></i><span id="navTxt"> Logout</span></p>
+      </a> -->
+      <form>
+        <button class="logout" id="logoutBtn" data-link="/logout" name="logout" value="/logout" method="POST"><i class="fas fa-sign-out-alt"></i><span id="navTxt"> Logout </span></button>
+      </form>
+    </div>
 		<!-- Intro -->
 		<!-- <section id="top" class="one dark cover"> -->
 				
@@ -115,7 +122,7 @@
       <h2 id="createHeader">Create Contact</h2>
 							
 
-      <form action="/api/contact/create" method="POST">
+      <form class="createContactForm" action="/api/contact/create" method="POST">
         <div class="row">
           <div class="col-6 col-12-mobile"><input type="text" name="contact_name" id="enterName" placeholder="Contact Name" />
           </div>
@@ -134,9 +141,10 @@
 			<!-- End of main body content -->
 		<!-- </section> -->
 
+	
 	</div>
-
 	<!-- Footer -->
+	<footer class="page-footer">
 	<div id="footer" class="footerDash">
 
 		<!-- Copyright -->
@@ -148,14 +156,15 @@
 		</ul>
 
 	</div>
+</footer>
 
 	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
+	<!-- <script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script> -->
+	<!-- <script src="assets/js/browser.min.js"></script> -->
+	<!-- <script src="assets/js/breakpoints.min.js"></script> -->
+	<!-- <script src="assets/js/util.js"></script> -->
 	<script src="assets/js/main.js"></script>
 	<script type="text/javascript" src="https://media.twiliocdn.com/sdk/js/client/v1.4/twilio.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>

@@ -13,6 +13,42 @@ body {
     padding: 0;
 }
 
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+flex: 1 0 auto;
+}
+
+#logoutBtn {
+    position: absolute;
+    right: 100px;
+}
+
+.signOutI {
+    padding-left: 8px;
+}
+
+.logout {
+    margin-top: 15px !important;
+}
+
+.footerDash {
+    height: 45px;
+    padding-top: 0 !important;
+    padding-bottom: 13px !important;
+}
+
+#createHeader {
+    margin-top: 58px !important;
+}
+
+.createContactForm {
+    margin-top: 15px !important;
+}
 
 input:focus,
 button:focus {
@@ -178,25 +214,55 @@ div {
 .navItems {
     clear: both;
     width: 100%;
-    height: 97%;
+    height: 56px !important;
+    background: #222629 !important;
 }
+
+/* #createNav {
+    height: 56px !important;
+} */
 
 #contact-link,
 #create-link,
 #profile-link {
     height: 98%;
-    display: inline-block;
+    display: inline-block !important;
     width: 100%;
     padding-bottom: 0 !important;
     padding-top: 0 !important;
 }
 
-/* #create-link,
 #profile-link {
-    padding-top: 0;
-    display: inline-block;
-    width: 100%;
-} */
+    height: 56px !important;
+}
+
+nav {
+    background-color: #212528 !important;
+}
+
+#phoneNav {
+    background-color: #ee6e73 !important;
+}
+
+.navCreate {
+    margin-top: 3px !important;
+}
+
+#listNav,
+#createNav,
+#profileNav {
+    padding-top: 5px !important;
+}
+
+#top-link {
+    color: white !important;
+    opacity: 0.8;
+    font-weight: 900;
+}
+
+.navItems:hover {
+    opacity: 1;
+}
 
 .navContacts,
 .navProfile {
@@ -237,6 +303,12 @@ div {
     height: 4.5em;
 }
 
+#top {
+    padding-top: 40px !important;
+    background-image: none !important;
+    background-color: transparent !important;
+}
+
 .footerDash {
     position: fixed;
     bottom: 0;
@@ -245,11 +317,13 @@ div {
     width: 100%;
 }
 
-#createHeader {
+#phoneHeader {
     text-align: center;
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
     color: white;
+    padding-top: 0 !important;
+
 }
 
 #numBox {

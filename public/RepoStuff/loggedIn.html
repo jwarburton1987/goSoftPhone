@@ -42,31 +42,31 @@
 			<!-- Nav -->
 			<nav id="nav">
 				<ul>
-					<li>
+					<li class="navItems" id="phoneNav">
 						<!-- TODO: Fix sidebar links -->
 						<a href="/loggedin" id="top-link">
 							<p class="home navPhone"><i class="sidebarIcons fas fa-mobile-alt"></i><span id="navTxt"> Phone</span></p>
 						</a>
 					</li>
 					
-					<li class="navItems">
+					<li class="navItems" id="listNav">
 							<!-- TODO: FIX SIDEBAR LINKS <i class="fas fa-address-book"></i> -->
-							<a href="" id="create-link">
-								<p class="home navContacts"><i class="fas fa-address-book"></i><span id="navTxt"> Contact List</span></p>
+							<a href="/contact_list" id="contact-link">
+								<p class="home navContacts"><i class="sidebarIcons fas fa-address-book"></i><span id="navTxt"> Contact List</span></p>
 							</a>
 					</li>
 					
-					<li class="navItems">
+					<li class="navItems" id="createNav">
 						<!-- TODO: FIX SIDEBAR LINKS <i class="fas fa-user-circle"></i> -->
-						<a href="/create_contact" id="portfolio-link create-link">
+						<a href="/create_contact" id="create-link">
 							<p class="home navCreate"><i class="sidebarIcons fas fa-address-card"></i><span id="navTxt"> Create Contact</span></p>
 						</a>
 					</li>
 					
-					<li class="navItems">
+					<li class="navItems" id="profileNav">
 						<!-- TODO: FIX SIDEBAR LINKS <i class="fas fa-user-circle"></i> -->
-						<a href="" id="profile-link">
-							<p class="home navProfile"><i class="fas fa-user-circle"></i><span id="navTxt"> Profile</span></p>
+						<a href="#" id="profile-link">
+							<p class="home navProfile"><i class="sidebarIcons fas fa-user-circle"></i><span id="navTxt"> Profile</span></p>
 						</a>
 					</li>
 				</ul>
@@ -106,7 +106,11 @@
 
 	<!-- Main -->
 	<div id="main">
-
+    <div class="logout">
+      <form>
+        <button class="logout" id="logoutBtn" data-link="/logout" name="logout" value="/logout" method="POST"><i class="signOutI fas fa-sign-out-alt"></i><span id="navTxt">  Logout   </span>  </button>
+      </form>
+    </div>
 		<!-- Intro -->
 		<section id="top" class="one dark cover">
 				
