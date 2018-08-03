@@ -59,3 +59,10 @@ typings/
 
 # next.js build output
 .next
+<<<<<<< HEAD
+=======
+
+# added files to ignore
+.DS_Store
+TODO.md
+>>>>>>> fb80464d5bbbe1efe5c61ab62a64c3740d842844

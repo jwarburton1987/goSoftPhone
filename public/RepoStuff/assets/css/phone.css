@@ -1,0 +1,270 @@
+h3 {
+    font-family: 'Nosifer';
+    font-size: 100px;
+    color: teal;
+    padding: 110px;
+    /* padding-right:10px; */
+}
+
+body {
+    background-image: url("https://www.salbii.com/wp-content/themes/salbii/images/wp-admin/layout-backgrounds/bgimg3.jpg");
+    background-color: #cccccc;
+    margin: 0;
+    padding: 0;
+}
+
+
+input:focus,
+button:focus {
+    outline: none;
+}
+
+#button-call:hover {
+    color: rgb(10, 161, 10) !important;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.phone {
+    width: 400px;
+    padding-left: 2px;
+    padding-right: 2px;
+    background: black;
+    margin: 10px auto;
+    border-radius: 8px;
+    box-shadow: 0 1px 10px 0 #777;
+    display: flex;
+    justify-content: center;
+}
+
+/* .header {
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 0;
+} */
+
+/* .header::after {
+    display: block;
+    content: "";
+    clear: both;
+} */
+
+.input input[type="text"] {
+    width: 80%;
+    float: left;
+    padding: 20px;
+    border: none;
+    font-family: 'Frijole';
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: right;
+    color: teal;
+}
+
+.input input {
+    width: 10%;
+    box-sizing: border-box;
+    padding: 8px;
+    border: none;
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: 'montserrat';
+    text-align: right;
+    color: #0A51BC;
+}
+
+.reset {
+    width: 20%;
+    float: left;
+    padding-right: 10px;
+}
+
+.reset button {
+    width: 100;
+    padding: 8px;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+}
+
+
+.keypad {
+    background: black;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.keypad columns {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.keypad columns::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.keypad columns .col-3 {
+    width: 33.3333%;
+    float: left;
+    text-align: center;
+}
+
+.keypad columns .col-3 button {
+    width: 68px;
+    height: 68px;
+    border-radius: 100%;
+    border: none;
+    font-family: 'montserrat';
+    color: black;
+    font-size: 30px;
+    /* background: blueviolet;
+    box-shadow: 0 5px 10px 0 blueviolet; */
+}
+
+.keypad columns .col-3 button:focus {
+    background: blue;
+}
+
+.keypad columns .col-2 {
+    float: left;
+    width: 50%;
+    padding-left:5px;
+    padding-right:5px;
+}
+
+.keypad columns .col-2 button {
+    width: 68px;
+    height: 68px;
+    border-radius: 100%;
+    border: none;
+    color:aqua;
+    font-size: 25px;
+    /* box-shadow: 0 5px 10px 0 #1DE0B4; */
+}
+
+.keypad columns .col-2 button.android {
+    color: black;
+    font-size: 25px;
+    float:right;
+}
+
+.keypad columns .col-2 button.iphone{
+    color: black;
+    font-size: 25px;
+}
+
+.columns {
+    text-align: center;
+}
+
+.sidebarIcons {
+    align-items: flex-start !important;
+    /* padding: 0 !important; */
+    float: left !important;
+    padding-left: 0 !important; 
+    padding-bottom: 0 !important;
+    padding-right: 5px;
+}
+
+.navItems {
+    clear: both;
+}
+
+.navContacts,
+.navProfile {
+    margin-bottom: 0 !important;
+}
+
+#navTxt {
+    float: right;
+    margin-left: 12px;
+}
+
+.input-field {
+    width: 100%;
+}
+
+#closeIcon {
+    position: relative;
+    align-items: right;
+    float: right;
+    /* padding-top: 10px; */
+    top: 10px;
+    color: white;
+    opacity: 0.3;
+    z-index: 1000;
+}
+
+#closeIcon:hover {
+    opacity: 1;
+}
+
+#numBox {
+    height: 100px;
+    width: 95%;
+    position: relative;
+    background: black;
+}
+
+#phoneNumField {
+    /* position: inherit; */
+    height: 100%;
+    position: absolute;
+    bottom: 12px;
+    height: 100%;
+    right: 0;
+}
+
+.iconBox {
+    position: absolute;
+    bottom: 12px;
+    height: 100%;
+    right: 0;
+}
+
+#info,
+#output-selection, 
+#volume-indicators {
+    display: none;
+}
+
+#call-controls {
+    overflow: hidden;
+}
+
+#controls {
+    background: black;
+    border-radius: .3em;
+}
+/* .container {
+    display: flex;
+    justify-content: center;
+} */
+
+input[type="text"]::-webkit-input-placeholder {
+    color: #636c72 !important;
+    text-align: center;
+}
+    
+input[type="text"]:-moz-placeholder { /* Firefox 18- */
+    color: #636c72 !important;
+    text-align: center;  
+}
+    
+input[type="text"]::-moz-placeholder {  /* Firefox 19+ */
+    color: #636c72 !important;
+    text-align: center;  
+}
+    
+input[type="text"]:-ms-input-placeholder {  
+    color: #636c72 !important;
+    text-align: center;  
+}
