@@ -1,11 +1,14 @@
 $(document).ready(function(){
+  $.get("/api/user_data", function(data) {
+    $(".userEmail").html(data.email + "'s Twilio # is: (714) 695-5738");
+  });
   $("#suffix-X").click(function() {
     $("#textarea1").empty();
   });
 
   $("#call-controls").prepend(
     `<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="numBox">
-        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="phoneNumField" placeholder="Enter a phone #">
+        <input class="mdl-textfield__input" type="text" id="phoneNumField" placeholder="Enter a phone #">
         
         <label class="mdl-textfield__label" for="phoneNumField"></label>
         <span class="mdl-textfield__error">Input is not a number!</span>

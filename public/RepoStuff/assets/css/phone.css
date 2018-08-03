@@ -13,6 +13,42 @@ body {
     padding: 0;
 }
 
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+flex: 1 0 auto;
+}
+
+#logoutBtn {
+    position: absolute;
+    right: 100px;
+}
+
+.signOutI {
+    padding-left: 8px;
+}
+
+.logout {
+    margin-top: 15px !important;
+}
+
+.footerDash {
+    height: 45px;
+    padding-top: 0 !important;
+    padding-bottom: 13px !important;
+}
+
+#createHeader {
+    margin-top: 58px !important;
+}
+
+.createContactForm {
+    margin-top: 15px !important;
+}
 
 input:focus,
 button:focus {
@@ -28,6 +64,7 @@ div {
 }
 
 .phone {
+    
     width: 400px;
     padding-left: 2px;
     padding-right: 2px;
@@ -172,10 +209,60 @@ div {
     padding-left: 0 !important; 
     padding-bottom: 0 !important;
     padding-right: 5px;
+    padding-top: 6px;
 }
 
 .navItems {
     clear: both;
+    width: 100%;
+    height: 56px !important;
+    background: #222629 !important;
+}
+
+/* #createNav {
+    height: 56px !important;
+} */
+
+#contact-link,
+#create-link,
+#profile-link {
+    height: 98%;
+    display: inline-block !important;
+    width: 100%;
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+}
+
+#profile-link {
+    height: 56px !important;
+}
+
+nav {
+    background-color: #212528 !important;
+}
+
+#phoneNav {
+    background-color: #ee6e73 !important;
+}
+
+.navCreate {
+    margin-top: 3px !important;
+}
+
+#listNav,
+#createNav,
+#profileNav {
+    padding-top: 5px !important;
+}
+
+#top-link {
+    color: white !important;
+    opacity: 0.8;
+    font-weight: 900;
+}
+
+.navItems:hover {
+    opacity: 1;
 }
 
 .navContacts,
@@ -184,7 +271,7 @@ div {
 }
 
 #navTxt {
-    float: right;
+    float: left;
     margin-left: 12px;
 }
 
@@ -205,6 +292,83 @@ div {
 
 #closeIcon:hover {
     opacity: 1;
+}
+
+#enterName,
+#enterNumber {
+    background: white;
+    border-radius: 0.3em;
+}
+
+.logoutBtn {
+    position: absolute;
+    right: 100px;
+    text-decoration: none;
+    background-color: #78a19f;
+    color: #333333;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+    margin-top: 10px;
+    height: 50px;
+    border-radius: 0.3em;
+}
+
+.signoutIcon {
+    padding-left: 8px;
+}
+
+.logoutTxt {
+    margin-top: 6px;
+}
+
+.add-btn {
+    height: 4.5em;
+}
+
+.userEmail {
+    font-size: 16px;
+    margin-top: 19px !important;
+    float: left;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+}
+
+#userTwilioNum {
+    float: left;
+    font-size: 16px;
+}
+
+.media-content {
+    margin-left: 60px !important;
+}
+
+.avatar48 {
+    clear: both;
+}
+
+#top {
+    padding-top: 40px !important;
+    background-image: none !important;
+    background-color: transparent !important;
+}
+
+.footerDash {
+    position: fixed;
+    bottom: 0;
+    right: auto;
+    left: auto;
+    width: 100%;
+}
+
+#phoneHeader {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    color: white;
+    padding-top: 0 !important;
+
 }
 
 #numBox {

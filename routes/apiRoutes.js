@@ -15,10 +15,17 @@ module.exports = function(app) {
     // They won't get this or even be able to access this page if they aren't authed
     res.json("/RepoStuff/loggedIn.html");
   });
-// ALTERNATIVELY per the documentation we can do this (NEEDS TESTING):
-app.post('/login', passport.authenticate('local', { 
-  successRedirect: '/',                                               failureRedirect: '/login' 
-}));
+// // ALTERNATIVELY per the documentation we can do this (NEEDS TESTING):
+// app.post('/login', passport.authenticate('local', { 
+//   successRedirect: '/',                                               failureRedirect: '/login' 
+// }));
+
+app.post("/api/logout", passport.authenticate("local"), function(req, res) {
+  console.log(req.user);
+
+  req.logout();
+  res.json("/");
+});
 
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
@@ -65,9 +72,10 @@ app.post('/login', passport.authenticate('local', {
     }
     else {
       console.log(req.body);
+      var contactNum = parseInt(req.body.phone_number);
       db.Phonebook.create({
-        contact_name: req.body.contact,
-        phone_number: req.body.phone_number,
+        contact_name: req.body.contact_name,
+        phone_number: contactNum,
         notes: req.body.notes,
         userID: req.user.id
       }).then(function(dbPhonebook) {
@@ -84,6 +92,7 @@ app.post('/login', passport.authenticate('local', {
   });
 
   // Get route for retrieving all contacts for a single user
+  // action="/api/contact/create/?_method=PUT" method="POST"
   app.get("/api/user/:contacts", function(req, res) {
     db.Phonebook.findAll({
       where: {
@@ -94,6 +103,76 @@ app.post('/login', passport.authenticate('local', {
         res.json(dbPhonebook);
       });
   });
+
+  // app.post("/api/contacts", (req, res) => {
+  //   // table variable is now available in req.body:
+  //   console.log(req.body.table);
+  //   // always send a response:
+  //   res.json({ ok: true });
+  // });
+
+  app.post("/api/contacts", function(req, res) {
+    console.log(res.data);
+    db.Phonebook.findAll({
+      where: {
+        UserID: req.user.id
+      }
+    }).then(function(dbPhonebook) {
+      console.log(dbPhonebook);
+      var table = `<table class="highlight">
+      <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Contact Number</th>
+            <th>Note</th>
+        </tr>
+      </thead>
+
+      <tbody>`;
+
+      
+
+      for(var i = 0; i < dbPhonebook.length; i++) {
+        table += "<tr>";
+        table += "<td>" + dbPhonebook[i].contact_id + "</td>";
+        table += "<td>" + dbPhonebook[i].contact_name + "</td>";
+        table += "<td>" + dbPhonebook[i].phone_number + "</td>";
+        table += "<td>" + dbPhonebook[i].notes + "</td>";
+        table += "</tr>";
+      }
+        table += "</tbody>";
+        table += "</table>";
+
+
+        res.json({
+          message: "table sent from apiRoutes",
+          data: table
+        });
+    });
+  });
+  // app.get("/cast", function(req, res) {
+  //   // All of the resulting records are stored in the variable "result."
+  //   connection.query("SELECT * FROM actors", function(err, result) {
+  //     var html = "<h1> The Seinfeld Cast Database </h1>";
+  
+  //     html += "<ul>";
+  
+  //     for(var i = 0; i < result.length; i++) {
+  //       html += "<li><p> ID: " + result[i].id + "</p>";
+  //       html += "<p> Name: " + result[i].name + "</p>";
+  //       html += "<p> Coolness Points: " + result[i].coolness_points + "</p>";
+  //       html += "<p> Attitude: " + result[i].attitude + "</p></li>";
+  //     }
+  
+  //     html += "</ul>";
+  
+  //     res.send(html);
+  
+  //   });
+  // });
+
+
 
   // Get route for retrieving a single Phonebook contact
   app.get("/api/contact/:id", function(req, res) {

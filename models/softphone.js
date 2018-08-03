@@ -2,16 +2,16 @@ var db = require("../models");
 var passport = require("../config/passport");
 var userID;
 
-module.exports = function(req, next) {
+// module.exports = function(req, next) {
 
-  if (req.user) {
-    userID = req.user.id;
-    return userID;
-  }
-  else {
-    return next();
-  }
-};
+//   if (req.user) {
+//     userID = req.user.id;
+//     return userID;
+//   }
+//   else {
+//     return next();
+//   }
+// };
 module.exports = function (sequelize, DataTypes) {
   var Phonebook = sequelize.define('Phonebook', {
       contact_id: {
@@ -25,7 +25,7 @@ module.exports = function (sequelize, DataTypes) {
           allowNull: false,
       },
       phone_number: {
-          type: DataTypes.INTEGER,
+          type: DataTypes.BIGINT,
           allowNull: false
       },
       notes: {
@@ -34,8 +34,7 @@ module.exports = function (sequelize, DataTypes) {
       },
       userID: {
         type: DataTypes.INTEGER,
-        allowNull: false,
-        defaultValue: userID
+        allowNull: true
       }
   });
   return Phonebook;
