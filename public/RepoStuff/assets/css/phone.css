@@ -172,11 +172,31 @@ div {
     padding-left: 0 !important; 
     padding-bottom: 0 !important;
     padding-right: 5px;
+    padding-top: 6px;
 }
 
 .navItems {
     clear: both;
+    width: 100%;
+    height: 97%;
 }
+
+#contact-link,
+#create-link,
+#profile-link {
+    height: 98%;
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* #create-link,
+#profile-link {
+    padding-top: 0;
+    display: inline-block;
+    width: 100%;
+} */
 
 .navContacts,
 .navProfile {
@@ -184,7 +204,7 @@ div {
 }
 
 #navTxt {
-    float: right;
+    float: left;
     margin-left: 12px;
 }
 
@@ -205,6 +225,31 @@ div {
 
 #closeIcon:hover {
     opacity: 1;
+}
+
+#enterName,
+#enterNumber {
+    background: white;
+    border-radius: 0.3em;
+}
+
+.add-btn {
+    height: 4.5em;
+}
+
+.footerDash {
+    position: fixed;
+    bottom: 0;
+    right: auto;
+    left: auto;
+    width: 100%;
+}
+
+#createHeader {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    color: white;
 }
 
 #numBox {

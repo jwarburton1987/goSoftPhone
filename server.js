@@ -3,6 +3,7 @@ require("dotenv").config();
 var express = require("express");
 var bodyParser = require("body-parser");
 var session = require("express-session");
+var methodOverride = require('method-override');
 // var exphbs = require("express-handlebars"); if we don't add handlebars we can remove this
 // Requiring passport as we've configured it
 var passport = require("./config/passport");
@@ -16,6 +17,7 @@ var app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static("public"));
+app.use(methodOverride("_method"));
 // We need to use sessions to keep track of our user's login status
 app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
@@ -34,7 +36,7 @@ app.use(passport.session());
 require("./routes/htmlRoutes.js")(app);
 require("./routes/apiRoutes.js")(app);
 
-var syncOptions = { force: true };
+var syncOptions = { force: false };
 
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`

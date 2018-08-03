@@ -15,10 +15,17 @@ module.exports = function(app) {
     // They won't get this or even be able to access this page if they aren't authed
     res.json("/RepoStuff/loggedIn.html");
   });
-// ALTERNATIVELY per the documentation we can do this (NEEDS TESTING):
-app.post('/login', passport.authenticate('local', { 
-  successRedirect: '/',                                               failureRedirect: '/login' 
-}));
+// // ALTERNATIVELY per the documentation we can do this (NEEDS TESTING):
+// app.post('/login', passport.authenticate('local', { 
+//   successRedirect: '/',                                               failureRedirect: '/login' 
+// }));
+
+app.post("/api/login", passport.authenticate("local"), function(req, res) {
+  // Since we're doing a POST with javascript, we can't actually redirect that post into a GET request
+  // So we're sending the user back the route to the members page because the redirect will happen on the front end
+  // They won't get this or even be able to access this page if they aren't authed
+  res.json("/RepoStuff/loggedIn.html");
+});
 
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
@@ -65,9 +72,10 @@ app.post('/login', passport.authenticate('local', {
     }
     else {
       console.log(req.body);
+      var contactNum = parseInt(req.body.phone_number);
       db.Phonebook.create({
-        contact_name: req.body.contact,
-        phone_number: req.body.phone_number,
+        contact_name: req.body.contact_name,
+        phone_number: contactNum,
         notes: req.body.notes,
         userID: req.user.id
       }).then(function(dbPhonebook) {
@@ -84,6 +92,7 @@ app.post('/login', passport.authenticate('local', {
   });
 
   // Get route for retrieving all contacts for a single user
+  // action="/api/contact/create/?_method=PUT" method="POST"
   app.get("/api/user/:contacts", function(req, res) {
     db.Phonebook.findAll({
       where: {

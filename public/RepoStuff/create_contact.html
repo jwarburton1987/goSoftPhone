@@ -62,28 +62,26 @@
 								<h2>Create Contact</h2>
 							
 
-							<!-- <p>Elementum sem parturient nulla quam placerat viverra
-							mauris non cum elit tempus ullamcorper dolor. Libero rutrum ut lacinia
-							donec curae mus. Eleifend id porttitor ac ultricies lobortis sem nunc
-							orci ridiculus faucibus a consectetur. Porttitor curae mauris urna mi dolor.</p> -->
-
-							<form method="post" action="#">
+							<form action="/api/contact/create" method="POST">
 								<div class="row">
-									<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Contact Name" /></div>
-									<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Contact Phone Number" /></div>
-									<div class="col-12">
-										<textarea name="message" placeholder="Additional Notes  (optional)"></textarea>
+									<div class="col-6 col-12-mobile"><input type="text" name="contact_name" placeholder="Contact Name" />
+									</div>
+									<div class="col-6 col-12-mobile"><input type="text" name="phone_number" placeholder="Contact Phone Number" />
 									</div>
 									<div class="col-12">
-										<input type="submit" value="Create Contact" />
+										<textarea name="notes" placeholder="Additional Notes  (optional)"></textarea>
+									</div>
+									<div class="col-12">
+											<button type="submit" class="btn add-btn">Create Contact</button>
+										<!-- <button type="submit" value="Create Contact" /> -->
 									</div>
 								</div>
 							</form>
 
 						</div>
-					</section>
+					<!-- </section>
 
-			</div>
+			</div> -->
 
 		<!-- Footer -->
 		<!--	<div id="footer">
