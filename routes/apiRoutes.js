@@ -22,7 +22,7 @@ module.exports = function(app) {
 
 app.post("/api/logout", passport.authenticate("local"), function(req, res) {
   console.log(req.user);
-  
+
   req.logout();
   res.json("/");
 });
@@ -103,6 +103,76 @@ app.post("/api/logout", passport.authenticate("local"), function(req, res) {
         res.json(dbPhonebook);
       });
   });
+
+  // app.post("/api/contacts", (req, res) => {
+  //   // table variable is now available in req.body:
+  //   console.log(req.body.table);
+  //   // always send a response:
+  //   res.json({ ok: true });
+  // });
+
+  app.post("/api/contacts", function(req, res) {
+    console.log(res.data);
+    db.Phonebook.findAll({
+      where: {
+        UserID: req.user.id
+      }
+    }).then(function(dbPhonebook) {
+      console.log(dbPhonebook);
+      var table = `<table class="highlight">
+      <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Contact Number</th>
+            <th>Note</th>
+        </tr>
+      </thead>
+
+      <tbody>`;
+
+      
+
+      for(var i = 0; i < dbPhonebook.length; i++) {
+        table += "<tr>";
+        table += "<td>" + dbPhonebook[i].contact_id + "</td>";
+        table += "<td>" + dbPhonebook[i].contact_name + "</td>";
+        table += "<td>" + dbPhonebook[i].phone_number + "</td>";
+        table += "<td>" + dbPhonebook[i].notes + "</td>";
+        table += "</tr>";
+      }
+        table += "</tbody>";
+        table += "</table>";
+
+
+        res.json({
+          message: "table sent from apiRoutes",
+          data: table
+        });
+    });
+  });
+  // app.get("/cast", function(req, res) {
+  //   // All of the resulting records are stored in the variable "result."
+  //   connection.query("SELECT * FROM actors", function(err, result) {
+  //     var html = "<h1> The Seinfeld Cast Database </h1>";
+  
+  //     html += "<ul>";
+  
+  //     for(var i = 0; i < result.length; i++) {
+  //       html += "<li><p> ID: " + result[i].id + "</p>";
+  //       html += "<p> Name: " + result[i].name + "</p>";
+  //       html += "<p> Coolness Points: " + result[i].coolness_points + "</p>";
+  //       html += "<p> Attitude: " + result[i].attitude + "</p></li>";
+  //     }
+  
+  //     html += "</ul>";
+  
+  //     res.send(html);
+  
+  //   });
+  // });
+
+
 
   // Get route for retrieving a single Phonebook contact
   app.get("/api/contact/:id", function(req, res) {

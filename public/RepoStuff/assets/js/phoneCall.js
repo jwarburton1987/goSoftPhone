@@ -1,4 +1,7 @@
 $(document).ready(function(){
+  $.get("/api/user_data", function(data) {
+    $(".userEmail").html(data.email + "'s Twilio # is: (714) 695-5738");
+  });
   $("#suffix-X").click(function() {
     $("#textarea1").empty();
   });

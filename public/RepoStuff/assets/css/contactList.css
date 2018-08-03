@@ -1,10 +1,10 @@
-h3 {
+/* h3 {
   font-family: 'Nosifer';
   font-size: 100px;
   color: teal;
   padding: 110px;
   /* padding-right:10px; */
-}
+/* }  */
 
 body {
   background-image: url("https://www.salbii.com/wp-content/themes/salbii/images/wp-admin/layout-backgrounds/bgimg3.jpg");
@@ -23,29 +23,17 @@ main {
 flex: 1 0 auto;
 }
 
-.logoutBtn {
+#logoutBtn {
   position: absolute;
   right: 100px;
-  /* font: bold 11px Arial; */
-  text-decoration: none;
-  background-color: #78a19f;
-  color: #333333;
-  /* padding: 2px 6px 2px 6px; */
-  border-top: 1px solid #CCCCCC;
-  border-right: 1px solid #333333;
-  border-bottom: 1px solid #333333;
-  border-left: 1px solid #CCCCCC;
-  margin-top: 10px;
-  height: 50px;
-  border-radius: 0.3em;
 }
 
-.signoutIcon {
+.signOutI {
   padding-left: 8px;
 }
 
-.logoutTxt {
-  margin-top: 6px;
+.logout {
+  margin-top: 15px !important;
 }
 
 .footerDash {
@@ -61,28 +49,6 @@ flex: 1 0 auto;
 .createContactForm {
   margin-top: 15px !important;
 }
-
-.userEmail {
-  font-size: 16px;
-  margin-top: 19px !important;
-  float: left;
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-weight: 700;
-}
-
-#userTwilioNum {
-  float: left;
-  font-size: 16px;
-}
-
-.media-content {
-  margin-left: 60px !important;
-}
-
-.avatar48 {
-  clear: both;
-}
-
 
 input:focus,
 button:focus {
@@ -120,6 +86,39 @@ div {
   content: "";
   clear: both;
 } */
+
+.logoutBtn {
+  position: absolute;
+  right: 100px;
+  text-decoration: none;
+  background-color: #78a19f;
+  color: #333333;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+  margin-top: 10px;
+  height: 50px;
+  border-radius: 0.3em;
+}
+
+.signoutIcon {
+  padding-left: 8px;
+}
+
+.logoutTxt {
+  margin-top: 6px;
+}
+
+tbody {
+  background-color: white;
+  color: black;
+}
+
+tr {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 16px;
+}
 
 .input input[type="text"] {
   width: 80%;
@@ -274,8 +273,29 @@ nav {
   background-color: #212528 !important;
 }
 
-#createNav {
+#listNav {
   background-color: #ee6e73 !important;
+}
+
+.userEmail {
+  font-size: 16px;
+  margin-top: 19px !important;
+  float: left;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 700;
+}
+
+#userTwilioNum {
+  float: left;
+  font-size: 16px;
+}
+
+.media-content {
+  margin-left: 60px !important;
+}
+
+.avatar48 {
+  clear: both;
 }
 
 .navCreate {
@@ -288,7 +308,7 @@ nav {
   padding-top: 5px !important;
 }
 
-#create-link {
+#contact-link {
   color: white !important;
   opacity: 0.8;
   font-weight: 900;
@@ -337,6 +357,12 @@ nav {
   height: 4.5em;
 }
 
+#top {
+  padding-top: 40px !important;
+  background-image: none !important;
+  background-color: transparent !important;
+}
+
 .footerDash {
   position: fixed;
   bottom: 0;
@@ -345,11 +371,17 @@ nav {
   width: 100%;
 }
 
-#createHeader {
+table {
+  margin-top: 30px !important;
+}
+
+#phoneHeader {
   text-align: center;
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
   color: white;
+  padding-top: 0 !important;
+
 }
 
 #numBox {

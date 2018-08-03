@@ -64,6 +64,7 @@ div {
 }
 
 .phone {
+    
     width: 400px;
     padding-left: 2px;
     padding-right: 2px;
@@ -299,8 +300,52 @@ nav {
     border-radius: 0.3em;
 }
 
+.logoutBtn {
+    position: absolute;
+    right: 100px;
+    text-decoration: none;
+    background-color: #78a19f;
+    color: #333333;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+    margin-top: 10px;
+    height: 50px;
+    border-radius: 0.3em;
+}
+
+.signoutIcon {
+    padding-left: 8px;
+}
+
+.logoutTxt {
+    margin-top: 6px;
+}
+
 .add-btn {
     height: 4.5em;
+}
+
+.userEmail {
+    font-size: 16px;
+    margin-top: 19px !important;
+    float: left;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+}
+
+#userTwilioNum {
+    float: left;
+    font-size: 16px;
+}
+
+.media-content {
+    margin-left: 60px !important;
+}
+
+.avatar48 {
+    clear: both;
 }
 
 #top {
